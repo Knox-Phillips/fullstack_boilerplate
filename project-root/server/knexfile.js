@@ -1,9 +1,9 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-require("dotenv").config();
-
-console.log("Loaded DATABASE_URL:", process.env.DATABASE_URL);
+require("dotenv").config({
+  path: require("path").resolve(__dirname, "../.env"),
+});
 
 module.exports = {
   development: {
